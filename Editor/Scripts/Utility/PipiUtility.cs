@@ -199,7 +199,7 @@ namespace ChenPipi.ProjectPinBoard.Editor
             FieldInfo instanceField = projectBrowserType!.GetField("s_LastInteractedProjectBrowser", BindingFlags.Static | BindingFlags.Public);
 
             object projectBrowser = instanceField!.GetValue(null);
-            showFolderContentsMethod?.Invoke(projectBrowser, new object[] { asset.GetInstanceID(), true });
+            showFolderContentsMethod?.Invoke(projectBrowser, new object[] { asset.GetEntityId(), true });
         }
 
         /// <summary>
